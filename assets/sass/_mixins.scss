@@ -21,3 +21,10 @@
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 }
+
+@mixin linearGradient($color1, $color2,$url){
+    background-image: linear-gradient(
+        $color1,
+        $color2
+    ),url($url)
+}

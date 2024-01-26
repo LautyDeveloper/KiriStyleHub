@@ -87,4 +87,56 @@ header .cart i {
 header .cart i:hover {
   color: #3f74a9;
   cursor: pointer;
+}
+
+.hero {
+  height: 90vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../media/1540500549285.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: inherit;
+}
+.hero p {
+  font-size: 4rem;
+  font-family: "Azeret Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: inherit;
+}
+.hero p .rosa {
+  font-weight: 700;
+  color: #FFB6C1;
+  letter-spacing: 2px;
+}
+.hero p .oro {
+  font-weight: 400;
+  color: #B76E79;
+  letter-spacing: 8px;
+}
+.hero button {
+  background: linear-gradient(45deg, #FFB6C1, #B76E79);
+  width: 10%;
+  height: 6%;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 4px;
+  transition: transform 0.4s ease;
+}
+.hero button:hover {
+  background: #B76E79;
+  transform: scale(1.05);
 }/*# sourceMappingURL=style.css.map */

@@ -13,6 +13,7 @@ $ororosa:#B76E79;
 //Fuentes
 $fuenteTitulo:'Martian Mono', monospace;
 $fuenteLinks:'JetBrains Mono', monospace;
+$fuenteHero:'Azeret Mono', monospace;
 body{
     @include mixins.crearFlex(column, center, center, center, inherit);
 }
@@ -64,4 +65,49 @@ header{
         }
         i:hover{color: #3f74a9;cursor: pointer;}
     }
+}
+
+.hero{
+    height: 90vh;
+    width: 100vw;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.8)
+    ),url("../media/1540500549285.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    @include mixins.crearFlex(column, center, center, center, inherit);
+    p{
+        font-size: 4rem;
+        font-family: $fuenteHero;
+        @include mixins.crearFlex(column, center, center, center, inherit);
+        .rosa{
+            font-weight: 700;
+            color: $rosa;
+            letter-spacing: 2px;
+        }
+        .oro{
+            font-weight: 400;
+            color: $ororosa;
+            letter-spacing: 8px;
+        }
+    }
+    button{
+        background: linear-gradient(
+            45deg,
+            $rosa,
+            $ororosa
+        );
+        width: 10%;
+        height: 6%;
+        border-radius: 20px;
+        @include mixins.resetearBorde();
+        color: $blanco;
+        font-weight: 700;
+        letter-spacing: 4px;
+        transition: transform .4s ease;
+    }
+    button:hover{background: $ororosa; transform: scale(1.05);}
 }
