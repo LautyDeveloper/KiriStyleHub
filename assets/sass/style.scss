@@ -1,435 +1,450 @@
-@use 'normalize';
-@use 'mixins';
+@use "normalize";
+@use "mixins";
 
 //Sector Variables
 
 //Colores
-$gris: #EFEFEF;
+$gris: #efefef;
 $azul: #10477e;
-$blanco: #FFFFFF;
-$rosa: #FFB6C1;
-$ororosa: #B76E79;
-$celeste: #59A5D8;
+$blanco: #ffffff;
+$rosa: #ffb6c1;
+$ororosa: #b76e79;
+$celeste: #59a5d8;
 $verde-agua: #1e8476;
-$verde-claro:#63fe94;
+$verde-claro: #63fe94;
 //Fuentes
-$fuenteTitulo: 'Martian Mono', monospace;
-$fuenteLinks: 'JetBrains Mono', monospace;
-$fuenteHero: 'Azeret Mono', monospace;
+$fuenteTitulo: "Martian Mono", monospace;
+$fuenteLinks: "JetBrains Mono", monospace;
+$fuenteHero: "Azeret Mono", monospace;
 
 body {
-    @include mixins.crearFlex(column, center, center, center, inherit);
+  @include mixins.crearFlex(column, center, center, center, inherit);
 }
 
 header {
-    background-color: $gris;
-    width: 100vw;
-    height: 10vh;
-    @include mixins.crearFlex(row, space-between, center, center, inherit);
-    padding: 0px 30px 0px 30px;
+  background-color: $gris;
+  width: 100vw;
+  height: 10vh;
+  @include mixins.crearFlex(row, space-between, center, center, inherit);
+  padding: 0px 30px 0px 30px;
 
-    h1 {
-        font-family: $fuenteTitulo;
-        font-size: 1.5rem;
-        margin: 0;
-        padding: 0;
-        color: $azul;
-    }
+  h1 {
+    font-family: $fuenteTitulo;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    color: $azul;
+  }
 
-    nav {
-        width: 70%;
-        @include mixins.crearFlex(column, center, flex-start, center, inherit);
+  nav {
+    width: 70%;
+    @include mixins.crearFlex(column, center, flex-start, center, inherit);
 
-        ul {
-            padding: 0;
-            margin: 0;
-            width: 50%;
-            height: 100%;
-            @include mixins.crearFlex(row, space-between, center, center, inherit);
+    ul {
+      padding: 0;
+      margin: 0;
+      width: 50%;
+      height: 100%;
+      @include mixins.crearFlex(row, space-between, center, center, inherit);
 
-            li {
-                list-style: none;
+      li {
+        list-style: none;
 
-                a {
-                    text-decoration: none;
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    letter-spacing: 2px;
-                    color: $ororosa;
-                    font-family: $fuenteLinks;
-                    transition: .4s ease-in;
-                }
-
-                a:hover {
-                    color: $rosa;
-                    letter-spacing: 3px;
-                }
-            }
+        a {
+          text-decoration: none;
+          font-size: 1.1rem;
+          font-weight: 700;
+          letter-spacing: 2px;
+          color: $ororosa;
+          font-family: $fuenteLinks;
+          transition: 0.4s ease-in;
         }
-    }
 
-    i {
-        font-size: 2rem;
-        color: $azul;
-        transition: .4s ease-in;
+        a:hover {
+          color: $rosa;
+          letter-spacing: 3px;
+        }
+      }
     }
+  }
 
-    i:hover {
-        color: $celeste;
-        cursor: pointer;
-    }
+  i {
+    font-size: 2rem;
+    color: $azul;
+    transition: 0.4s ease-in;
+  }
+
+  i:hover {
+    color: $celeste;
+    cursor: pointer;
+  }
 }
 
 .hero {
-    height: 90vh;
-    width: 100vw;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.8)), url("../media/1540500549285.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  height: 90vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("../media/1540500549285.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  @include mixins.crearFlex(column, center, center, center, inherit);
+
+  p {
+    font-size: 4rem;
+    font-family: $fuenteHero;
     @include mixins.crearFlex(column, center, center, center, inherit);
 
-    p {
-        font-size: 4rem;
-        font-family: $fuenteHero;
-        @include mixins.crearFlex(column, center, center, center, inherit);
-
-        .rosa {
-            font-weight: 700;
-            color: $rosa;
-            letter-spacing: 2px;
-        }
-
-        .oro {
-            font-weight: 400;
-            color: $ororosa;
-            letter-spacing: 8px;
-        }
+    .rosa {
+      font-weight: 700;
+      color: $rosa;
+      letter-spacing: 2px;
     }
 
-    button {
-        background: linear-gradient(45deg,
-                $rosa,
-                $ororosa );
-        width: 10%;
-        height: 6%;
-        border-radius: 20px;
-        @include mixins.resetearBorde();
-        color: $blanco;
-        font-weight: 700;
-        letter-spacing: 4px;
-        transition: transform .4s ease;
+    .oro {
+      font-weight: 400;
+      color: $ororosa;
+      letter-spacing: 8px;
     }
+  }
 
-    button:hover {
-        background: $ororosa;
-        transform: scale(1.05);
-    }
+  button {
+    background: linear-gradient(45deg, $rosa, $ororosa);
+    width: 10%;
+    height: 6%;
+    border-radius: 20px;
+    @include mixins.resetearBorde();
+    color: $blanco;
+    font-weight: 700;
+    letter-spacing: 4px;
+    transition: transform 0.4s ease;
+  }
+
+  button:hover {
+    background: $ororosa;
+    transform: scale(1.05);
+  }
 }
 
 .data {
-    width: 100vw;
-    height: 400px;
-    @include mixins.crearFlex(column, center, center, center, inherit);
-    background-color: $gris;
-    &_cartas {
-        width: 80%;
-        height: 100%;
-        @include mixins.crearFlex(row, center, center, center, inherit);
+  width: 100vw;
+  height: 400px;
+  @include mixins.crearFlex(column, center, center, center, inherit);
+  background-color: $gris;
+  &_cartas {
+    width: 80%;
+    height: 100%;
+    @include mixins.crearFlex(row, center, center, center, inherit);
 
-        &_carta {
-            background-color: $azul;
-            width: 25%;
-            max-width: 300px;
-            padding: 5px 15px;
-            color: white;
-            padding: 15px 10px 0px 10px;
-            margin: 0 1%;
-            border-radius: 10px;
-            @include mixins.crearFlex(column, center, center, center, inherit);
-            transition: .2s ease-in;
+    &_carta {
+      background-color: $azul;
+      width: 25%;
+      max-width: 300px;
+      padding: 5px 15px;
+      color: white;
+      padding: 15px 10px 0px 10px;
+      margin: 0 1%;
+      border-radius: 10px;
+      @include mixins.crearFlex(column, center, center, center, inherit);
+      transition: 0.2s ease-in;
 
-            .icono {
-                width: 75px;
-                height: 75px;
-                border-radius: 100%;
-                background-color: $celeste;
-                @include mixins.crearFlex(column, center, center, center, inherit);
+      .icono {
+        width: 75px;
+        height: 75px;
+        border-radius: 100%;
+        background-color: $celeste;
+        @include mixins.crearFlex(column, center, center, center, inherit);
 
-                i {
-                    font-size: 3rem;
-                }
-
-            }
-
-            .carta_titulo {
-                overflow: hidden;
-                font-weight: 600;
-                font-size: 1.7rem;
-                letter-spacing: 2px;
-                margin: 10px;
-                color: $rosa;
-            }
-
-            .carta_parrafo {
-                font-size: 1.1rem;
-                width: 80%;
-            }
+        i {
+          font-size: 3rem;
         }
-        &_carta:hover{transform: scale(1.02); transform: translateY(-20px); }
-    }
-}
+      }
 
-.destacados{
-    width: 100vw;
-    min-height: 500px;
-    @include mixins.crearFlex(column, center, center, center, inherit);
-    background-color: $gris;
-    .cartas{
-        width: 80%;
-        @include mixins.crearFlex(row, center, center, center, inherit);
-    }
-    .card-container {
-        width: 25%;
-        max-width: 300px;
-        height: 300px;
-        position: relative;
-        border-radius: 10px;
+      .carta_titulo {
         overflow: hidden;
-        margin: 0 1%;
-        .card {
-            width: 100%;
-            height: 100%;
-            border-radius: inherit;  
-            .front-content {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-            }
-            .content {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                gap: 10px;
-                background: linear-gradient(40deg, $verde-agua 20%, $azul 100% );
-                color: white;
-                padding: 20px;
-                line-height: 1.5;
-                border-radius: 5px;
-                pointer-events: none;
-                transform: translateX(-96%);
-                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-                .heading {
-                    font-size: 32px;
-                    font-weight: 700;
-                  }
-                p{
-                    font-weight: 600;
-                }
-            }
-        }
-        .card:hover .content {
-            transform: translateY(0);
-        }
-  
-        .card:hover .front-content {
-            transform: translateX(-30%);
-        }
-  
-        .card:hover .front-content p {
-            opacity: 0;
-        }
-  
-    }
-}
+        font-weight: 600;
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+        margin: 10px;
+        color: $rosa;
+      }
 
-.productos_container{
-    background-color: $gris;
-    width: 100vw;
-    min-height: 100vh;
-    @include mixins.crearFlex(column, center, center, center, inherit);
-    .productos{
+      .carta_parrafo {
+        font-size: 1.1rem;
         width: 80%;
-        @include mixins.crearFlex(row, center, center, center, wrap);
-        .card {
-            position: relative;
-            background: transparent;
-            width: 100%;
-            max-width: 400px;
-            height: 240px;
-            border: none;
-            .container-image {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: $rosa;
-                width: 200px;
-                height: 200px;
-                cursor: pointer;
-                border: none;
-                border-radius: 50%;
-                box-shadow: 0 0 3px 1px $ororosa, 2px 2px 3px $ororosa, inset 2px 2px 2px $ororosa;
-                transition: all .3s ease-in-out, opacity .3s;
-                transition-delay: .6s, 0s;
-                .image-circle {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 70%;
-                    height: auto;
-                    object-fit: contain;
-                    filter: drop-shadow(2px 2px 2px #1818188a);
-                    transition: all .3s ease-in-out;
-                    transition-delay: .4s;
-                  }
-              }
-              .content {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                text-align: start;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: $rosa;
-                padding: 20px;
-                width: 400px;
-                height: 200px;
-                cursor: pointer;
-                border: none;
-                border-radius: 8px;
-                box-shadow: 0 0 3px 1px $ororosa, 2px 2px 3px $ororosa, inset 2px 2px 2px $ororosa;
-                visibility: hidden;
-                transition: .3s ease-in-out;
-                transition-delay: 0s;
-                z-index: 1;
-
-                .detail {
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
-                    height: 100%;
-                    opacity: 0;
-                    transition: all .3s ease-in-out;
-                    transition-delay: 0s;
-                    overflow: hidden;
-
-                    span {
-                        margin-bottom: 5px;
-                        margin-top: 0;
-                        font-size: 1.3rem;
-                        font-weight: 800;
-                        color: $blanco;
-                        overflow: hidden;
-                      }
-                      p{
-                        font-size: 1.1rem;
-                        font-weight: 700;
-                        color: $verde-claro;
-                        margin-top: 5px;
-                        overflow: hidden;
-                      }
-                      button {
-                        background: linear-gradient(
-                            $azul,
-                            $verde-agua
-                        );
-                        margin-top: 10px;
-                        width: 100px;
-                        height: 40px;
-                        color: #ffffff;
-                        font-size: 13px;
-                        border: none;
-                        border-radius: 20px;
-                        transition: .3s ease-in-out;
-                        font-size: 1rem;
-                        font-weight: 400;
-                      }
-                  }
-                  .product-image {
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-                    .box-image {
-                        display: flex;
-                        position: absolute;
-                        top: 0;
-                        left: -25%;
-                        width: 100%;
-                        height: 115%;
-                        opacity: 0;
-                        transform: scale(.5);
-                        transition: all .5s ease-in-out;
-                        transition-delay: 0s;
-                        .img-product {
-                            margin: auto;
-                            width: 7rem;
-                            height: auto;
-                          }
-                      }
-                  }
-              }
-          }
-          
-          .card:hover {
-            width: 400px;
-          }
-          
-          .card:hover .container-image {
-            opacity: 0;
-            border-radius: 8px;
-            transition-delay: 0s, .6s;
-          }
-          
-          .card:hover .container-image .image-circle {
-            opacity: 0;
-            transition-delay: 0s;
-          }
-          
-          .card:hover .content {
-            width: 400px;
-            height: 200px;
-            visibility: visible;
-            transition-delay: .3s;
-          }
-          
-          .card:hover .content .detail {
-            opacity: 100%;
-            transition: 2s;
-            transition-delay: .5s;
-          }
-          
-          .card .content .detail button:hover {
-            transform: scale(1.05);
-          }
-          
-          .card:hover .content .product-image .box-image {
-            top: -15%;
-            left: 0;
-            opacity: 100%;
-            transform: scale(1);
-            transition-delay: .5s;
-          }
-          
-          .fil-shoes1, .fil-shoes2 {
-            fill: #333333
-          }
+      }
     }
+    &_carta:hover {
+      transform: scale(1.02);
+      transform: translateY(-20px);
+    }
+  }
 }
 
-  
+.destacados {
+  width: 100vw;
+  min-height: 500px;
+  @include mixins.crearFlex(column, center, center, center, inherit);
+  background-color: $gris;
+  .cartas {
+    width: 80%;
+    @include mixins.crearFlex(row, center, center, center, inherit);
+  }
+  .card-container {
+    width: 25%;
+    max-width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 1%;
+    .card {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      .front-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        overflow: hidden;
+      }
+      .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+        background: linear-gradient(40deg, $verde-agua 20%, $azul 100%);
+        color: white;
+        padding: 20px;
+        line-height: 1.5;
+        border-radius: 5px;
+        pointer-events: none;
+        transform: translateX(-96%);
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        .heading {
+          font-size: 32px;
+          font-weight: 700;
+        }
+        p {
+          font-weight: 600;
+        }
+      }
+    }
+    .card:hover .content {
+      transform: translateY(0);
+    }
+
+    .card:hover .front-content {
+      transform: translateX(-30%);
+    }
+
+    .card:hover .front-content p {
+      opacity: 0;
+    }
+  }
+}
+
+.productos_container {
+  background-color: $gris;
+  width: 100vw;
+  min-height: 100vh;
+  @include mixins.crearFlex(column, center, center, center, inherit);
+  .productos {
+    width: 80%;
+    @include mixins.crearFlex(row, center, center, center, wrap);
+    .card {
+      position: relative;
+      background: transparent;
+      width: 100%;
+      max-width: 400px;
+      height: 240px;
+      border: none;
+      .container-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $rosa;
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+        border: none;
+        border-radius: 50%;
+        box-shadow: 0 0 3px 1px $ororosa, 2px 2px 3px $ororosa,
+          inset 2px 2px 2px $ororosa;
+        transition: all 0.3s ease-in-out, opacity 0.3s;
+        transition-delay: 0.6s, 0s;
+        .image-circle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 70%;
+          height: auto;
+          object-fit: contain;
+          filter: drop-shadow(2px 2px 2px #1818188a);
+          transition: all 0.3s ease-in-out;
+          transition-delay: 0.4s;
+        }
+      }
+      .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: start;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $rosa;
+        padding: 20px;
+        width: 400px;
+        height: 200px;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 0 3px 1px $ororosa, 2px 2px 3px $ororosa,
+          inset 2px 2px 2px $ororosa;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+        transition-delay: 0s;
+        z-index: 1;
+
+        .detail {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+          transition-delay: 0s;
+          overflow: hidden;
+
+          span {
+            margin-bottom: 5px;
+            margin-top: 0;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: $blanco;
+            overflow: hidden;
+          }
+          p {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: $verde-claro;
+            margin-top: 5px;
+            overflow: hidden;
+          }
+          button {
+            background: linear-gradient($azul, $verde-agua);
+            margin-top: 10px;
+            width: 100px;
+            height: 40px;
+            color: #ffffff;
+            font-size: 13px;
+            border: none;
+            border-radius: 20px;
+            transition: 0.3s ease-in-out;
+            font-size: 1rem;
+            font-weight: 400;
+          }
+        }
+        .product-image {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          .box-image {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: -25%;
+            width: 100%;
+            height: 115%;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.5s ease-in-out;
+            transition-delay: 0s;
+            .img-product {
+              margin: auto;
+              width: 7rem;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+
+    .card:hover {
+      width: 400px;
+    }
+
+    .card:hover .container-image {
+      opacity: 0;
+      border-radius: 8px;
+      transition-delay: 0s, 0.6s;
+    }
+
+    .card:hover .container-image .image-circle {
+      opacity: 0;
+      transition-delay: 0s;
+    }
+
+    .card:hover .content {
+      width: 400px;
+      height: 200px;
+      visibility: visible;
+      transition-delay: 0.3s;
+    }
+
+    .card:hover .content .detail {
+      opacity: 100%;
+      transition: 2s;
+      transition-delay: 0.5s;
+    }
+
+    .card .content .detail button:hover {
+      transform: scale(1.05);
+    }
+
+    .card:hover .content .product-image .box-image {
+      top: -15%;
+      left: 0;
+      opacity: 100%;
+      transform: scale(1);
+      transition-delay: 0.5s;
+    }
+
+    .fil-shoes1,
+    .fil-shoes2 {
+      fill: #333333;
+    }
+  }
+  .filtros {
+    width: 80%;
+    @include mixins.crearFlex(row, space-evenly, center, center, inherit);
+    margin-bottom: 20px;
+    .filtro {
+      background-color: $azul;
+      padding: 10px 40px;
+      border-radius: 20px;
+      color: $blanco;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .filtro--active {
+      background-color: $verde-agua;
+    }
+  }
+}
