@@ -76,7 +76,7 @@ header i {
   transition: 0.4s ease-in;
 }
 header i:hover {
-  color: #3f74a9;
+  color: #59A5D8;
   cursor: pointer;
 }
 
@@ -133,7 +133,6 @@ header i:hover {
 }
 
 .data {
-  background: linear-gradient(#FFB6C1, #B76E79);
   width: 100vw;
   height: 400px;
   display: flex;
@@ -142,6 +141,7 @@ header i:hover {
   align-items: center;
   text-align: center;
   flex-wrap: inherit;
+  background-color: #EFEFEF;
 }
 .data_cartas {
   width: 80%;
@@ -174,7 +174,7 @@ header i:hover {
   width: 75px;
   height: 75px;
   border-radius: 100%;
-  background-color: #B76E79;
+  background-color: #59A5D8;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -191,6 +191,7 @@ header i:hover {
   font-size: 1.7rem;
   letter-spacing: 2px;
   margin: 10px;
+  color: #FFB6C1;
 }
 .data_cartas_carta .carta_parrafo {
   font-size: 1.1rem;
@@ -199,4 +200,84 @@ header i:hover {
 .data_cartas_carta:hover {
   transform: scale(1.02);
   transform: translateY(-20px);
+}
+
+.destacados {
+  width: 100vw;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: inherit;
+  background-color: #EFEFEF;
+}
+.destacados .cartas {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: inherit;
+}
+.destacados .card-container {
+  width: 25%;
+  max-width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 1%;
+}
+.destacados .card-container .card {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.destacados .card-container .card .front-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.destacados .card-container .card .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  background: linear-gradient(40deg, #1e8476 20%, #10477e 100%);
+  color: white;
+  padding: 20px;
+  line-height: 1.5;
+  border-radius: 5px;
+  pointer-events: none;
+  transform: translateX(-96%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.destacados .card-container .card .content .heading {
+  font-size: 32px;
+  font-weight: 700;
+}
+.destacados .card-container .card .content p {
+  font-weight: 600;
+}
+.destacados .card-container .card:hover .content {
+  transform: translateY(0);
+}
+.destacados .card-container .card:hover .front-content {
+  transform: translateX(-30%);
+}
+.destacados .card-container .card:hover .front-content p {
+  opacity: 0;
 }/*# sourceMappingURL=style.css.map */

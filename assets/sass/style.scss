@@ -9,7 +9,8 @@ $azul: #10477e;
 $blanco: #FFFFFF;
 $rosa: #FFB6C1;
 $ororosa: #B76E79;
-
+$celeste: #59A5D8;
+$verde-agua: #1e8476;
 //Fuentes
 $fuenteTitulo: 'Martian Mono', monospace;
 $fuenteLinks: 'JetBrains Mono', monospace;
@@ -73,7 +74,7 @@ header {
     }
 
     i:hover {
-        color: #3f74a9;
+        color: $celeste;
         cursor: pointer;
     }
 }
@@ -128,14 +129,10 @@ header {
 }
 
 .data {
-    background: linear-gradient(
-        $rosa,
-        $ororosa
-    );
     width: 100vw;
     height: 400px;
     @include mixins.crearFlex(column, center, center, center, inherit);
-
+    background-color: $gris;
     &_cartas {
         width: 80%;
         height: 100%;
@@ -157,7 +154,7 @@ header {
                 width: 75px;
                 height: 75px;
                 border-radius: 100%;
-                background-color: $ororosa;
+                background-color: $celeste;
                 @include mixins.crearFlex(column, center, center, center, inherit);
 
                 i {
@@ -172,6 +169,7 @@ header {
                 font-size: 1.7rem;
                 letter-spacing: 2px;
                 margin: 10px;
+                color: $rosa;
             }
 
             .carta_parrafo {
@@ -182,3 +180,79 @@ header {
         &_carta:hover{transform: scale(1.02); transform: translateY(-20px); }
     }
 }
+
+.destacados{
+    width: 100vw;
+    min-height: 500px;
+    @include mixins.crearFlex(column, center, center, center, inherit);
+    background-color: $gris;
+    .cartas{
+        width: 80%;
+        @include mixins.crearFlex(row, center, center, center, inherit);
+    }
+    .card-container {
+        width: 25%;
+        max-width: 300px;
+        height: 300px;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0 1%;
+        .card {
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;  
+            .front-content {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+            }
+            .content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                gap: 10px;
+                background: linear-gradient(40deg, $verde-agua 20%, $azul 100% );
+                color: white;
+                padding: 20px;
+                line-height: 1.5;
+                border-radius: 5px;
+                pointer-events: none;
+                transform: translateX(-96%);
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+                .heading {
+                    font-size: 32px;
+                    font-weight: 700;
+                  }
+                p{
+                    font-weight: 600;
+                }
+            }
+        }
+        .card:hover .content {
+            transform: translateY(0);
+        }
+  
+        .card:hover .front-content {
+            transform: translateX(-30%);
+        }
+  
+        .card:hover .front-content p {
+            opacity: 0;
+        }
+  
+    }
+}
+
+
+  
