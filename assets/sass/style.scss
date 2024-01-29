@@ -11,6 +11,7 @@ $rosa: #FFB6C1;
 $ororosa: #B76E79;
 $celeste: #59A5D8;
 $verde-agua: #1e8476;
+$verde-claro:#63fe94;
 //Fuentes
 $fuenteTitulo: 'Martian Mono', monospace;
 $fuenteLinks: 'JetBrains Mono', monospace;
@@ -254,5 +255,181 @@ header {
     }
 }
 
+.productos_container{
+    background-color: $gris;
+    width: 100vw;
+    min-height: 100vh;
+    @include mixins.crearFlex(column, center, center, center, inherit);
+    .productos{
+        width: 80%;
+        @include mixins.crearFlex(row, center, center, center, wrap);
+        .card {
+            position: relative;
+            background: transparent;
+            width: 100%;
+            max-width: 400px;
+            height: 240px;
+            border: none;
+            .container-image {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: $rosa;
+                width: 200px;
+                height: 200px;
+                cursor: pointer;
+                border: none;
+                border-radius: 50%;
+                box-shadow: 0 0 3px 1px $ororosa, 2px 2px 3px $ororosa, inset 2px 2px 2px $ororosa;
+                transition: all .3s ease-in-out, opacity .3s;
+                transition-delay: .6s, 0s;
+                .image-circle {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 70%;
+                    height: auto;
+                    object-fit: contain;
+                    filter: drop-shadow(2px 2px 2px #1818188a);
+                    transition: all .3s ease-in-out;
+                    transition-delay: .4s;
+                  }
+              }
+              .content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: start;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: $rosa;
+                padding: 20px;
+                width: 400px;
+                height: 200px;
+                cursor: pointer;
+                border: none;
+                border-radius: 8px;
+                box-shadow: 0 0 3px 1px $ororosa, 2px 2px 3px $ororosa, inset 2px 2px 2px $ororosa;
+                visibility: hidden;
+                transition: .3s ease-in-out;
+                transition-delay: 0s;
+                z-index: 1;
+
+                .detail {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: all .3s ease-in-out;
+                    transition-delay: 0s;
+                    overflow: hidden;
+
+                    span {
+                        margin-bottom: 5px;
+                        margin-top: 0;
+                        font-size: 1.3rem;
+                        font-weight: 800;
+                        color: $blanco;
+                        overflow: hidden;
+                      }
+                      p{
+                        font-size: 1.1rem;
+                        font-weight: 700;
+                        color: $verde-claro;
+                        margin-top: 5px;
+                        overflow: hidden;
+                      }
+                      button {
+                        background: linear-gradient(
+                            $azul,
+                            $verde-agua
+                        );
+                        margin-top: 10px;
+                        width: 100px;
+                        height: 40px;
+                        color: #ffffff;
+                        font-size: 13px;
+                        border: none;
+                        border-radius: 20px;
+                        transition: .3s ease-in-out;
+                        font-size: 1rem;
+                        font-weight: 400;
+                      }
+                  }
+                  .product-image {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    .box-image {
+                        display: flex;
+                        position: absolute;
+                        top: 0;
+                        left: -25%;
+                        width: 100%;
+                        height: 115%;
+                        opacity: 0;
+                        transform: scale(.5);
+                        transition: all .5s ease-in-out;
+                        transition-delay: 0s;
+                        .img-product {
+                            margin: auto;
+                            width: 7rem;
+                            height: auto;
+                          }
+                      }
+                  }
+              }
+          }
+          
+          .card:hover {
+            width: 400px;
+          }
+          
+          .card:hover .container-image {
+            opacity: 0;
+            border-radius: 8px;
+            transition-delay: 0s, .6s;
+          }
+          
+          .card:hover .container-image .image-circle {
+            opacity: 0;
+            transition-delay: 0s;
+          }
+          
+          .card:hover .content {
+            width: 400px;
+            height: 200px;
+            visibility: visible;
+            transition-delay: .3s;
+          }
+          
+          .card:hover .content .detail {
+            opacity: 100%;
+            transition: 2s;
+            transition-delay: .5s;
+          }
+          
+          .card .content .detail button:hover {
+            transform: scale(1.05);
+          }
+          
+          .card:hover .content .product-image .box-image {
+            top: -15%;
+            left: 0;
+            opacity: 100%;
+            transform: scale(1);
+            transition-delay: .5s;
+          }
+          
+          .fil-shoes1, .fil-shoes2 {
+            fill: #333333
+          }
+    }
+}
 
   

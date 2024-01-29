@@ -280,4 +280,179 @@ header i:hover {
 }
 .destacados .card-container .card:hover .front-content p {
   opacity: 0;
+}
+
+.productos_container {
+  background-color: #EFEFEF;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: inherit;
+}
+.productos_container .productos {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.productos_container .productos .card {
+  position: relative;
+  background: transparent;
+  width: 100%;
+  max-width: 400px;
+  height: 240px;
+  border: none;
+}
+.productos_container .productos .card .container-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFB6C1;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 1px #B76E79, 2px 2px 3px #B76E79, inset 2px 2px 2px #B76E79;
+  transition: all 0.3s ease-in-out, opacity 0.3s;
+  transition-delay: 0.6s, 0s;
+}
+.productos_container .productos .card .container-image .image-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: drop-shadow(2px 2px 2px rgba(24, 24, 24, 0.5411764706));
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.4s;
+}
+.productos_container .productos .card .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFB6C1;
+  padding: 20px;
+  width: 400px;
+  height: 200px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 3px 1px #B76E79, 2px 2px 3px #B76E79, inset 2px 2px 2px #B76E79;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0s;
+  z-index: 1;
+}
+.productos_container .productos .card .content .detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0s;
+  overflow: hidden;
+}
+.productos_container .productos .card .content .detail span {
+  margin-bottom: 5px;
+  margin-top: 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  overflow: hidden;
+}
+.productos_container .productos .card .content .detail p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #63fe94;
+  margin-top: 5px;
+  overflow: hidden;
+}
+.productos_container .productos .card .content .detail button {
+  background: linear-gradient(#10477e, #1e8476);
+  margin-top: 10px;
+  width: 100px;
+  height: 40px;
+  color: #ffffff;
+  font-size: 13px;
+  border: none;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.productos_container .productos .card .content .product-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.productos_container .productos .card .content .product-image .box-image {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: -25%;
+  width: 100%;
+  height: 115%;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0s;
+}
+.productos_container .productos .card .content .product-image .box-image .img-product {
+  margin: auto;
+  width: 7rem;
+  height: auto;
+}
+.productos_container .productos .card:hover {
+  width: 400px;
+}
+.productos_container .productos .card:hover .container-image {
+  opacity: 0;
+  border-radius: 8px;
+  transition-delay: 0s, 0.6s;
+}
+.productos_container .productos .card:hover .container-image .image-circle {
+  opacity: 0;
+  transition-delay: 0s;
+}
+.productos_container .productos .card:hover .content {
+  width: 400px;
+  height: 200px;
+  visibility: visible;
+  transition-delay: 0.3s;
+}
+.productos_container .productos .card:hover .content .detail {
+  opacity: 100%;
+  transition: 2s;
+  transition-delay: 0.5s;
+}
+.productos_container .productos .card .content .detail button:hover {
+  transform: scale(1.05);
+}
+.productos_container .productos .card:hover .content .product-image .box-image {
+  top: -15%;
+  left: 0;
+  opacity: 100%;
+  transform: scale(1);
+  transition-delay: 0.5s;
+}
+.productos_container .productos .fil-shoes1, .productos_container .productos .fil-shoes2 {
+  fill: #333333;
 }/*# sourceMappingURL=style.css.map */
