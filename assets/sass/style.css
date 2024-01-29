@@ -307,9 +307,10 @@ header i:hover {
   position: relative;
   background: transparent;
   width: 100%;
-  max-width: 400px;
-  height: 240px;
+  width: 210px;
+  height: 210px;
   border: none;
+  margin: 5%;
 }
 .productos_container .productos .card .container-image {
   position: absolute;
@@ -389,8 +390,8 @@ header i:hover {
 .productos_container .productos .card .content .detail button {
   background: linear-gradient(#10477e, #1e8476);
   margin-top: 10px;
-  width: 100px;
-  height: 40px;
+  width: 90px;
+  height: 30px;
   color: #ffffff;
   font-size: 13px;
   border: none;
@@ -398,6 +399,7 @@ header i:hover {
   transition: 0.3s ease-in-out;
   font-size: 1rem;
   font-weight: 400;
+  padding: 0;
 }
 .productos_container .productos .card .content .product-image {
   position: relative;
@@ -423,6 +425,7 @@ header i:hover {
 }
 .productos_container .productos .card:hover {
   width: 400px;
+  margin: 0;
 }
 .productos_container .productos .card:hover .container-image {
   opacity: 0;
@@ -479,4 +482,18 @@ header i:hover {
 }
 .productos_container .filtros .filtro--active {
   background-color: #1e8476;
+}
+.productos_container button {
+  padding: 10px 40px;
+  border-radius: 10px;
+  margin-top: 30px;
+  border: 2px solid #b76e79;
+  color: #b76e79;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 0.3s ease-in;
+}
+.productos_container button:hover {
+  background-color: #b76e79;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
