@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -69,22 +70,12 @@ header nav ul li a:hover {
   color: #FFB6C1;
   letter-spacing: 3px;
 }
-header .cart {
-  width: 5%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-wrap: inherit;
-}
-header .cart i {
+header i {
   font-size: 2rem;
   color: #10477e;
   transition: 0.4s ease-in;
 }
-header .cart i:hover {
+header i:hover {
   color: #3f74a9;
   cursor: pointer;
 }
@@ -139,4 +130,73 @@ header .cart i:hover {
 .hero button:hover {
   background: #B76E79;
   transform: scale(1.05);
+}
+
+.data {
+  background: linear-gradient(#FFB6C1, #B76E79);
+  width: 100vw;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: inherit;
+}
+.data_cartas {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: inherit;
+}
+.data_cartas_carta {
+  background-color: #10477e;
+  width: 25%;
+  max-width: 300px;
+  padding: 5px 15px;
+  color: white;
+  padding: 15px 10px 0px 10px;
+  margin: 0 1%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: inherit;
+  transition: 0.2s ease-in;
+}
+.data_cartas_carta .icono {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  background-color: #B76E79;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: inherit;
+}
+.data_cartas_carta .icono i {
+  font-size: 3rem;
+}
+.data_cartas_carta .carta_titulo {
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+  margin: 10px;
+}
+.data_cartas_carta .carta_parrafo {
+  font-size: 1.1rem;
+  width: 80%;
+}
+.data_cartas_carta:hover {
+  transform: scale(1.02);
+  transform: translateY(-20px);
 }/*# sourceMappingURL=style.css.map */

@@ -4,44 +4,51 @@
 //Sector Variables
 
 //Colores
-$gris:#EFEFEF;
-$azul:#10477e;
-$blanco:#FFFFFF;
-$rosa:#FFB6C1;
-$ororosa:#B76E79;
+$gris: #EFEFEF;
+$azul: #10477e;
+$blanco: #FFFFFF;
+$rosa: #FFB6C1;
+$ororosa: #B76E79;
 
 //Fuentes
-$fuenteTitulo:'Martian Mono', monospace;
-$fuenteLinks:'JetBrains Mono', monospace;
-$fuenteHero:'Azeret Mono', monospace;
-body{
+$fuenteTitulo: 'Martian Mono', monospace;
+$fuenteLinks: 'JetBrains Mono', monospace;
+$fuenteHero: 'Azeret Mono', monospace;
+
+body {
     @include mixins.crearFlex(column, center, center, center, inherit);
 }
-header{
+
+header {
     background-color: $gris;
     width: 100vw;
     height: 10vh;
-    @include mixins.crearFlex(row, space-between , center, center, inherit);
+    @include mixins.crearFlex(row, space-between, center, center, inherit);
     padding: 0px 30px 0px 30px;
-    h1{
+
+    h1 {
         font-family: $fuenteTitulo;
         font-size: 1.5rem;
         margin: 0;
         padding: 0;
         color: $azul;
     }
-    nav{
+
+    nav {
         width: 70%;
         @include mixins.crearFlex(column, center, flex-start, center, inherit);
-        ul{
+
+        ul {
             padding: 0;
             margin: 0;
             width: 50%;
             height: 100%;
             @include mixins.crearFlex(row, space-between, center, center, inherit);
-            li{
+
+            li {
                 list-style: none;
-                a{
+
+                a {
                     text-decoration: none;
                     font-size: 1.1rem;
                     font-weight: 700;
@@ -50,56 +57,60 @@ header{
                     font-family: $fuenteLinks;
                     transition: .4s ease-in;
                 }
-                a:hover{color: $rosa; letter-spacing: 3px;}
+
+                a:hover {
+                    color: $rosa;
+                    letter-spacing: 3px;
+                }
             }
         }
     }
-    .cart{
-        width: 5%;
-        height: 100%;
-        @include mixins.crearFlex(column, center, center, center, inherit);
-        i{
-            font-size: 2rem;
-            color: $azul;
-            transition: .4s ease-in;
-        }
-        i:hover{color: #3f74a9;cursor: pointer;}
+
+    i {
+        font-size: 2rem;
+        color: $azul;
+        transition: .4s ease-in;
+    }
+
+    i:hover {
+        color: #3f74a9;
+        cursor: pointer;
     }
 }
 
-.hero{
+.hero {
     height: 90vh;
     width: 100vw;
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.8)
-    ),url("../media/1540500549285.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.8)), url("../media/1540500549285.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     @include mixins.crearFlex(column, center, center, center, inherit);
-    p{
+
+    p {
         font-size: 4rem;
         font-family: $fuenteHero;
         @include mixins.crearFlex(column, center, center, center, inherit);
-        .rosa{
+
+        .rosa {
             font-weight: 700;
             color: $rosa;
             letter-spacing: 2px;
         }
-        .oro{
+
+        .oro {
             font-weight: 400;
             color: $ororosa;
             letter-spacing: 8px;
         }
     }
-    button{
-        background: linear-gradient(
-            45deg,
-            $rosa,
-            $ororosa
-        );
+
+    button {
+        background: linear-gradient(45deg,
+                $rosa,
+                $ororosa );
         width: 10%;
         height: 6%;
         border-radius: 20px;
@@ -109,5 +120,65 @@ header{
         letter-spacing: 4px;
         transition: transform .4s ease;
     }
-    button:hover{background: $ororosa; transform: scale(1.05);}
+
+    button:hover {
+        background: $ororosa;
+        transform: scale(1.05);
+    }
+}
+
+.data {
+    background: linear-gradient(
+        $rosa,
+        $ororosa
+    );
+    width: 100vw;
+    height: 400px;
+    @include mixins.crearFlex(column, center, center, center, inherit);
+
+    &_cartas {
+        width: 80%;
+        height: 100%;
+        @include mixins.crearFlex(row, center, center, center, inherit);
+
+        &_carta {
+            background-color: $azul;
+            width: 25%;
+            max-width: 300px;
+            padding: 5px 15px;
+            color: white;
+            padding: 15px 10px 0px 10px;
+            margin: 0 1%;
+            border-radius: 10px;
+            @include mixins.crearFlex(column, center, center, center, inherit);
+            transition: .2s ease-in;
+
+            .icono {
+                width: 75px;
+                height: 75px;
+                border-radius: 100%;
+                background-color: $ororosa;
+                @include mixins.crearFlex(column, center, center, center, inherit);
+
+                i {
+                    font-size: 3rem;
+                }
+
+            }
+
+            .carta_titulo {
+                overflow: hidden;
+                font-weight: 600;
+                font-size: 1.7rem;
+                letter-spacing: 2px;
+                margin: 10px;
+            }
+
+            .carta_parrafo {
+                font-size: 1.1rem;
+                width: 80%;
+            }
+        }
+        &_carta:hover{transform: scale(1.02); transform: translateY(-20px); }
+    }
 }
