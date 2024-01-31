@@ -1,6 +1,6 @@
 @use "normalize";
 @use "mixins";
-
+@use "loader";
 //Sector Variables
 
 //Colores
@@ -464,4 +464,8 @@ header {
     background-color: $ororosa;
     color: white;
   }
+}
+
+.hidden {
+  visibility: hidden;
 }
